@@ -1,0 +1,1026 @@
+{
+ "kind": "registry",
+ "rows": [
+  {
+   "module": "pollution",
+   "name": "pm10_h1",
+   "version": "20261116-0742",
+   "dataset_version": "openaq:2025-10-11 10:30:00..2026-11-16 04:30:00:rows=19238",
+   "feature_schema": [
+    "pm25_lag0",
+    "pm25_lag1",
+    "pm25_lag2",
+    "pm25_lag3",
+    "pm25_lag6",
+    "pm25_lag12",
+    "pm25_lag24",
+    "pm10_lag0",
+    "pm10_lag1",
+    "pm10_lag2",
+    "pm10_lag3",
+    "pm10_lag6",
+    "pm10_lag12",
+    "pm10_lag24",
+    "no2_lag0",
+    "no2_lag3",
+    "no2_lag24",
+    "so2_lag0",
+    "so2_lag3",
+    "so2_lag24",
+    "co_lag0",
+    "co_lag3",
+    "co_lag24",
+    "o3_lag0",
+    "o3_lag3",
+    "o3_lag24",
+    "pm25_roll3",
+    "pm25_roll6",
+    "pm25_roll24",
+    "pm10_roll6",
+    "pm10_roll24",
+    "pm25_diff1",
+    "temperature",
+    "relativehumidity",
+    "wind_speed",
+    "wind_speed_roll3",
+    "wind_dir_sin",
+    "wind_dir_cos",
+    "rainfall_mm",
+    "rain_roll6",
+    "rain_roll24",
+    "cloud_cover_pct",
+    "hour_sin",
+    "hour_cos",
+    "dow",
+    "is_weekend",
+    "month",
+    "station_code"
+   ],
+   "metrics": {
+    "model_type": "xgboost_d4",
+    "val": {
+     "n": 1927,
+     "mae": 7.7313,
+     "rmse": 11.1897,
+     "r2": 0.7849,
+     "mape_pct": 19.4299
+    },
+    "test": {
+     "n": 2250,
+     "mae": 7.1591,
+     "rmse": 12.5597,
+     "r2": 0.9055,
+     "mape_pct": 15.531
+    },
+    "test_per_station": {
+     "3409505": {
+      "n": 1133,
+      "mae": 7.405,
+      "rmse": 14.3168,
+      "r2": 0.8897,
+      "mape_pct": 14.2002
+     },
+     "3409508": {
+      "n": 1117,
+      "mae": 6.9097,
+      "rmse": 10.4807,
+      "r2": 0.9252,
+      "mape_pct": 16.8822
+     }
+    },
+    "interval": {
+     "level": 0.8,
+     "halfwidth": 12.319,
+     "test_coverage": 0.8551
+    },
+    "skill_vs_persistence": 0.1931,
+    "beats_baseline": true,
+    "candidate_val_rmse": {
+     "xgboost_d4": 11.1897,
+     "xgboost_d6": 11.1998,
+     "random_forest": 11.2238
+    },
+    "rows": {
+     "train": 10448,
+     "val": 2178,
+     "test": 2332
+    },
+    "top_features": [
+     [
+      "pm10_lag0",
+      0.3119
+     ],
+     [
+      "pm10_roll24",
+      0.1662
+     ],
+     [
+      "pm10_roll6",
+      0.1646
+     ],
+     [
+      "pm25_lag0",
+      0.0889
+     ],
+     [
+      "hour_sin",
+      0.0225
+     ],
+     [
+      "co_lag0",
+      0.02
+     ],
+     [
+      "no2_lag0",
+      0.016
+     ],
+     [
+      "pm25_roll24",
+      0.0156
+     ],
+     [
+      "pm25_roll6",
+      0.0141
+     ],
+     [
+      "pm25_diff1",
+      0.0138
+     ]
+    ],
+    "split": {
+     "train_end": "2026-07-18T23:30:00",
+     "val_end": "2026-09-17T02:30:00",
+     "gap_hours": 6,
+     "first_obs": "2025-10-11 10:30:00",
+     "last_obs": "2026-11-16 04:30:00"
+    }
+   },
+   "baseline_metrics": {
+    "persistence": {
+     "n": 2250,
+     "mae": 7.3448,
+     "rmse": 15.5651,
+     "r2": 0.8548,
+     "mape_pct": 13.054
+    },
+    "hour_of_day_mean": {
+     "n": 2250,
+     "mae": 55.4248,
+     "rmse": 65.6255,
+     "r2": -1.5803,
+     "mape_pct": 166.5931
+    }
+   },
+   "artifact_path": "ml_engine/saved_models/pollution/pm10_h1_20261116-0742.joblib",
+   "calibration_status": "LOCALLY_VALIDATED",
+   "trained_on": "OBSERVED",
+   "is_active": true,
+   "notes": "xgboost_d4; train-only fit evaluated on held-out test period",
+   "trained_at": "2026-11-16T07:44:58.759448+00:00"
+  },
+  {
+   "module": "pollution",
+   "name": "pm10_h3",
+   "version": "20261116-0742",
+   "dataset_version": "openaq:2025-10-11 10:30:00..2026-11-16 04:30:00:rows=19238",
+   "feature_schema": [
+    "pm25_lag0",
+    "pm25_lag1",
+    "pm25_lag2",
+    "pm25_lag3",
+    "pm25_lag6",
+    "pm25_lag12",
+    "pm25_lag24",
+    "pm10_lag0",
+    "pm10_lag1",
+    "pm10_lag2",
+    "pm10_lag3",
+    "pm10_lag6",
+    "pm10_lag12",
+    "pm10_lag24",
+    "no2_lag0",
+    "no2_lag3",
+    "no2_lag24",
+    "so2_lag0",
+    "so2_lag3",
+    "so2_lag24",
+    "co_lag0",
+    "co_lag3",
+    "co_lag24",
+    "o3_lag0",
+    "o3_lag3",
+    "o3_lag24",
+    "pm25_roll3",
+    "pm25_roll6",
+    "pm25_roll24",
+    "pm10_roll6",
+    "pm10_roll24",
+    "pm25_diff1",
+    "temperature",
+    "relativehumidity",
+    "wind_speed",
+    "wind_speed_roll3",
+    "wind_dir_sin",
+    "wind_dir_cos",
+    "rainfall_mm",
+    "rain_roll6",
+    "rain_roll24",
+    "cloud_cover_pct",
+    "hour_sin",
+    "hour_cos",
+    "dow",
+    "is_weekend",
+    "month",
+    "station_code"
+   ],
+   "metrics": {
+    "model_type": "xgboost_d4",
+    "val": {
+     "n": 1831,
+     "mae": 13.8256,
+     "rmse": 19.1767,
+     "r2": 0.3804,
+     "mape_pct": 36.1488
+    },
+    "test": {
+     "n": 2153,
+     "mae": 15.9504,
+     "rmse": 29.954,
+     "r2": 0.435,
+     "mape_pct": 35.2479
+    },
+    "test_per_station": {
+     "3409505": {
+      "n": 1082,
+      "mae": 15.591,
+      "rmse": 29.866,
+      "r2": 0.4698,
+      "mape_pct": 31.5421
+     },
+     "3409508": {
+      "n": 1071,
+      "mae": 16.3134,
+      "rmse": 30.0427,
+      "r2": 0.3931,
+      "mape_pct": 38.9887
+     }
+    },
+    "interval": {
+     "level": 0.8,
+     "halfwidth": 21.331,
+     "test_coverage": 0.778
+    },
+    "skill_vs_persistence": 0.1662,
+    "beats_baseline": true,
+    "candidate_val_rmse": {
+     "xgboost_d4": 19.1767,
+     "xgboost_d6": 19.3019,
+     "random_forest": 19.619
+    },
+    "rows": {
+     "train": 10446,
+     "val": 2178,
+     "test": 2328
+    },
+    "top_features": [
+     [
+      "pm10_roll24",
+      0.2974
+     ],
+     [
+      "pm10_roll6",
+      0.162
+     ],
+     [
+      "pm25_roll6",
+      0.0708
+     ],
+     [
+      "hour_sin",
+      0.062
+     ],
+     [
+      "pm10_lag0",
+      0.0593
+     ],
+     [
+      "month",
+      0.0459
+     ],
+     [
+      "pm25_lag0",
+      0.036
+     ],
+     [
+      "pm25_roll24",
+      0.0283
+     ],
+     [
+      "wind_speed",
+      0.0233
+     ],
+     [
+      "hour_cos",
+      0.0213
+     ]
+    ],
+    "split": {
+     "train_end": "2026-07-18T23:30:00",
+     "val_end": "2026-09-17T02:30:00",
+     "gap_hours": 6,
+     "first_obs": "2025-10-11 10:30:00",
+     "last_obs": "2026-11-16 04:30:00"
+    }
+   },
+   "baseline_metrics": {
+    "persistence": {
+     "n": 2153,
+     "mae": 16.5338,
+     "rmse": 35.9257,
+     "r2": 0.1873,
+     "mape_pct": 28.4163
+    },
+    "hour_of_day_mean": {
+     "n": 2153,
+     "mae": 55.3537,
+     "rmse": 65.1482,
+     "r2": -1.6727,
+     "mape_pct": 164.4075
+    }
+   },
+   "artifact_path": "ml_engine/saved_models/pollution/pm10_h3_20261116-0742.joblib",
+   "calibration_status": "LOCALLY_VALIDATED",
+   "trained_on": "OBSERVED",
+   "is_active": true,
+   "notes": "xgboost_d4; train-only fit evaluated on held-out test period",
+   "trained_at": "2026-11-16T07:45:28.800533+00:00"
+  },
+  {
+   "module": "pollution",
+   "name": "pm10_h6",
+   "version": "20261116-0742",
+   "dataset_version": "openaq:2025-10-11 10:30:00..2026-11-16 04:30:00:rows=19238",
+   "feature_schema": [
+    "pm25_lag0",
+    "pm25_lag1",
+    "pm25_lag2",
+    "pm25_lag3",
+    "pm25_lag6",
+    "pm25_lag12",
+    "pm25_lag24",
+    "pm10_lag0",
+    "pm10_lag1",
+    "pm10_lag2",
+    "pm10_lag3",
+    "pm10_lag6",
+    "pm10_lag12",
+    "pm10_lag24",
+    "no2_lag0",
+    "no2_lag3",
+    "no2_lag24",
+    "so2_lag0",
+    "so2_lag3",
+    "so2_lag24",
+    "co_lag0",
+    "co_lag3",
+    "co_lag24",
+    "o3_lag0",
+    "o3_lag3",
+    "o3_lag24",
+    "pm25_roll3",
+    "pm25_roll6",
+    "pm25_roll24",
+    "pm10_roll6",
+    "pm10_roll24",
+    "pm25_diff1",
+    "temperature",
+    "relativehumidity",
+    "wind_speed",
+    "wind_speed_roll3",
+    "wind_dir_sin",
+    "wind_dir_cos",
+    "rainfall_mm",
+    "rain_roll6",
+    "rain_roll24",
+    "cloud_cover_pct",
+    "hour_sin",
+    "hour_cos",
+    "dow",
+    "is_weekend",
+    "month",
+    "station_code"
+   ],
+   "metrics": {
+    "model_type": "xgboost_d4",
+    "val": {
+     "n": 1864,
+     "mae": 16.2487,
+     "rmse": 21.7381,
+     "r2": 0.1862,
+     "mape_pct": 44.1199
+    },
+    "test": {
+     "n": 2087,
+     "mae": 20.528,
+     "rmse": 36.6134,
+     "r2": 0.2887,
+     "mape_pct": 45.6131
+    },
+    "test_per_station": {
+     "3409505": {
+      "n": 1046,
+      "mae": 19.9098,
+      "rmse": 38.4447,
+      "r2": 0.343,
+      "mape_pct": 40.2357
+     },
+     "3409508": {
+      "n": 1041,
+      "mae": 21.1491,
+      "rmse": 34.676,
+      "r2": 0.2034,
+      "mape_pct": 51.0272
+     }
+    },
+    "interval": {
+     "level": 0.8,
+     "halfwidth": 24.557,
+     "test_coverage": 0.7269
+    },
+    "skill_vs_persistence": 0.1965,
+    "beats_baseline": true,
+    "candidate_val_rmse": {
+     "xgboost_d4": 21.7381,
+     "xgboost_d6": 22.0435,
+     "random_forest": 22.6451
+    },
+    "rows": {
+     "train": 10446,
+     "val": 2178,
+     "test": 2322
+    },
+    "top_features": [
+     [
+      "pm10_roll24",
+      0.3067
+     ],
+     [
+      "pm10_roll6",
+      0.1587
+     ],
+     [
+      "month",
+      0.0501
+     ],
+     [
+      "pm25_roll6",
+      0.0485
+     ],
+     [
+      "o3_lag3",
+      0.0379
+     ],
+     [
+      "pm25_roll24",
+      0.0293
+     ],
+     [
+      "o3_lag24",
+      0.0263
+     ],
+     [
+      "pm10_lag6",
+      0.0259
+     ],
+     [
+      "hour_sin",
+      0.0241
+     ],
+     [
+      "pm25_lag0",
+      0.0225
+     ]
+    ],
+    "split": {
+     "train_end": "2026-07-18T23:30:00",
+     "val_end": "2026-09-17T02:30:00",
+     "gap_hours": 6,
+     "first_obs": "2025-10-11 10:30:00",
+     "last_obs": "2026-11-16 04:30:00"
+    }
+   },
+   "baseline_metrics": {
+    "persistence": {
+     "n": 2087,
+     "mae": 22.6155,
+     "rmse": 45.5664,
+     "r2": -0.1017,
+     "mape_pct": 39.4545
+    },
+    "hour_of_day_mean": {
+     "n": 2087,
+     "mae": 55.7169,
+     "rmse": 66.9978,
+     "r2": -1.3818,
+     "mape_pct": 164.4343
+    }
+   },
+   "artifact_path": "ml_engine/saved_models/pollution/pm10_h6_20261116-0742.joblib",
+   "calibration_status": "LOCALLY_VALIDATED",
+   "trained_on": "OBSERVED",
+   "is_active": true,
+   "notes": "xgboost_d4; train-only fit evaluated on held-out test period",
+   "trained_at": "2026-11-16T07:45:58.305377+00:00"
+  },
+  {
+   "module": "pollution",
+   "name": "pm25_h1",
+   "version": "20261116-0742",
+   "dataset_version": "openaq:2025-10-11 10:30:00..2026-11-16 04:30:00:rows=19238",
+   "feature_schema": [
+    "pm25_lag0",
+    "pm25_lag1",
+    "pm25_lag2",
+    "pm25_lag3",
+    "pm25_lag6",
+    "pm25_lag12",
+    "pm25_lag24",
+    "pm10_lag0",
+    "pm10_lag1",
+    "pm10_lag2",
+    "pm10_lag3",
+    "pm10_lag6",
+    "pm10_lag12",
+    "pm10_lag24",
+    "no2_lag0",
+    "no2_lag3",
+    "no2_lag24",
+    "so2_lag0",
+    "so2_lag3",
+    "so2_lag24",
+    "co_lag0",
+    "co_lag3",
+    "co_lag24",
+    "o3_lag0",
+    "o3_lag3",
+    "o3_lag24",
+    "pm25_roll3",
+    "pm25_roll6",
+    "pm25_roll24",
+    "pm10_roll6",
+    "pm10_roll24",
+    "pm25_diff1",
+    "temperature",
+    "relativehumidity",
+    "wind_speed",
+    "wind_speed_roll3",
+    "wind_dir_sin",
+    "wind_dir_cos",
+    "rainfall_mm",
+    "rain_roll6",
+    "rain_roll24",
+    "cloud_cover_pct",
+    "hour_sin",
+    "hour_cos",
+    "dow",
+    "is_weekend",
+    "month",
+    "station_code"
+   ],
+   "metrics": {
+    "model_type": "random_forest",
+    "val": {
+     "n": 1885,
+     "mae": 4.1456,
+     "rmse": 6.7405,
+     "r2": 0.8071,
+     "mape_pct": 18.9005
+    },
+    "test": {
+     "n": 2183,
+     "mae": 3.9381,
+     "rmse": 15.4994,
+     "r2": 0.739,
+     "mape_pct": 11.8504
+    },
+    "test_per_station": {
+     "3409505": {
+      "n": 1119,
+      "mae": 4.1389,
+      "rmse": 18.4919,
+      "r2": 0.7043,
+      "mape_pct": 10.9406
+     },
+     "3409508": {
+      "n": 1064,
+      "mae": 3.727,
+      "rmse": 11.5437,
+      "r2": 0.797,
+      "mape_pct": 12.798
+     }
+    },
+    "interval": {
+     "level": 0.8,
+     "halfwidth": 5.707,
+     "test_coverage": 0.8571
+    },
+    "skill_vs_persistence": -0.0961,
+    "beats_baseline": false,
+    "candidate_val_rmse": {
+     "xgboost_d4": 6.9225,
+     "xgboost_d6": 6.918,
+     "random_forest": 6.7405
+    },
+    "rows": {
+     "train": 10333,
+     "val": 2142,
+     "test": 2276
+    },
+    "top_features": null,
+    "split": {
+     "train_end": "2026-07-18T23:30:00",
+     "val_end": "2026-09-17T02:30:00",
+     "gap_hours": 6,
+     "first_obs": "2025-10-11 10:30:00",
+     "last_obs": "2026-11-16 04:30:00"
+    }
+   },
+   "baseline_metrics": {
+    "persistence": {
+     "n": 2183,
+     "mae": 3.9161,
+     "rmse": 14.1402,
+     "r2": 0.7828,
+     "mape_pct": 12.4344
+    },
+    "hour_of_day_mean": {
+     "n": 2183,
+     "mae": 32.6556,
+     "rmse": 41.5546,
+     "r2": -0.8759,
+     "mape_pct": 141.8085
+    }
+   },
+   "artifact_path": "ml_engine/saved_models/pollution/pm25_h1_20261116-0742.joblib",
+   "calibration_status": "NO_SKILL_OVER_BASELINE",
+   "trained_on": "OBSERVED",
+   "is_active": true,
+   "notes": "random_forest; train-only fit evaluated on held-out test period",
+   "trained_at": "2026-11-16T07:43:27.925971+00:00"
+  },
+  {
+   "module": "pollution",
+   "name": "pm25_h3",
+   "version": "20261116-0742",
+   "dataset_version": "openaq:2025-10-11 10:30:00..2026-11-16 04:30:00:rows=19238",
+   "feature_schema": [
+    "pm25_lag0",
+    "pm25_lag1",
+    "pm25_lag2",
+    "pm25_lag3",
+    "pm25_lag6",
+    "pm25_lag12",
+    "pm25_lag24",
+    "pm10_lag0",
+    "pm10_lag1",
+    "pm10_lag2",
+    "pm10_lag3",
+    "pm10_lag6",
+    "pm10_lag12",
+    "pm10_lag24",
+    "no2_lag0",
+    "no2_lag3",
+    "no2_lag24",
+    "so2_lag0",
+    "so2_lag3",
+    "so2_lag24",
+    "co_lag0",
+    "co_lag3",
+    "co_lag24",
+    "o3_lag0",
+    "o3_lag3",
+    "o3_lag24",
+    "pm25_roll3",
+    "pm25_roll6",
+    "pm25_roll24",
+    "pm10_roll6",
+    "pm10_roll24",
+    "pm25_diff1",
+    "temperature",
+    "relativehumidity",
+    "wind_speed",
+    "wind_speed_roll3",
+    "wind_dir_sin",
+    "wind_dir_cos",
+    "rainfall_mm",
+    "rain_roll6",
+    "rain_roll24",
+    "cloud_cover_pct",
+    "hour_sin",
+    "hour_cos",
+    "dow",
+    "is_weekend",
+    "month",
+    "station_code"
+   ],
+   "metrics": {
+    "model_type": "xgboost_d6",
+    "val": {
+     "n": 1786,
+     "mae": 7.9883,
+     "rmse": 12.1944,
+     "r2": 0.3789,
+     "mape_pct": 32.5898
+    },
+    "test": {
+     "n": 2077,
+     "mae": 10.4152,
+     "rmse": 23.987,
+     "r2": 0.3407,
+     "mape_pct": 39.2443
+    },
+    "test_per_station": {
+     "3409505": {
+      "n": 1066,
+      "mae": 10.6671,
+      "rmse": 25.5026,
+      "r2": 0.3781,
+      "mape_pct": 39.5779
+     },
+     "3409508": {
+      "n": 1011,
+      "mae": 10.1496,
+      "rmse": 22.2775,
+      "r2": 0.2668,
+      "mape_pct": 38.8996
+     }
+    },
+    "interval": {
+     "level": 0.8,
+     "halfwidth": 11.446,
+     "test_coverage": 0.7256
+    },
+    "skill_vs_persistence": 0.1857,
+    "beats_baseline": true,
+    "candidate_val_rmse": {
+     "xgboost_d4": 12.3365,
+     "xgboost_d6": 12.1944,
+     "random_forest": 12.358
+    },
+    "rows": {
+     "train": 10331,
+     "val": 2142,
+     "test": 2272
+    },
+    "top_features": [
+     [
+      "pm25_roll24",
+      0.3025
+     ],
+     [
+      "pm25_roll6",
+      0.2312
+     ],
+     [
+      "pm25_lag0",
+      0.0946
+     ],
+     [
+      "pm10_roll24",
+      0.0435
+     ],
+     [
+      "hour_sin",
+      0.0357
+     ],
+     [
+      "month",
+      0.0267
+     ],
+     [
+      "hour_cos",
+      0.022
+     ],
+     [
+      "pm25_roll3",
+      0.0155
+     ],
+     [
+      "o3_lag3",
+      0.0137
+     ],
+     [
+      "wind_speed",
+      0.0125
+     ]
+    ],
+    "split": {
+     "train_end": "2026-07-18T23:30:00",
+     "val_end": "2026-09-17T02:30:00",
+     "gap_hours": 6,
+     "first_obs": "2025-10-11 10:30:00",
+     "last_obs": "2026-11-16 04:30:00"
+    }
+   },
+   "baseline_metrics": {
+    "persistence": {
+     "n": 2077,
+     "mae": 8.6007,
+     "rmse": 29.459,
+     "r2": 0.0056,
+     "mape_pct": 27.1474
+    },
+    "hour_of_day_mean": {
+     "n": 2077,
+     "mae": 32.4466,
+     "rmse": 40.9745,
+     "r2": -0.9238,
+     "mape_pct": 142.2973
+    }
+   },
+   "artifact_path": "ml_engine/saved_models/pollution/pm25_h3_20261116-0742.joblib",
+   "calibration_status": "LOCALLY_VALIDATED",
+   "trained_on": "OBSERVED",
+   "is_active": true,
+   "notes": "xgboost_d6; train-only fit evaluated on held-out test period",
+   "trained_at": "2026-11-16T07:43:55.860676+00:00"
+  },
+  {
+   "module": "pollution",
+   "name": "pm25_h6",
+   "version": "20261116-0742",
+   "dataset_version": "openaq:2025-10-11 10:30:00..2026-11-16 04:30:00:rows=19238",
+   "feature_schema": [
+    "pm25_lag0",
+    "pm25_lag1",
+    "pm25_lag2",
+    "pm25_lag3",
+    "pm25_lag6",
+    "pm25_lag12",
+    "pm25_lag24",
+    "pm10_lag0",
+    "pm10_lag1",
+    "pm10_lag2",
+    "pm10_lag3",
+    "pm10_lag6",
+    "pm10_lag12",
+    "pm10_lag24",
+    "no2_lag0",
+    "no2_lag3",
+    "no2_lag24",
+    "so2_lag0",
+    "so2_lag3",
+    "so2_lag24",
+    "co_lag0",
+    "co_lag3",
+    "co_lag24",
+    "o3_lag0",
+    "o3_lag3",
+    "o3_lag24",
+    "pm25_roll3",
+    "pm25_roll6",
+    "pm25_roll24",
+    "pm10_roll6",
+    "pm10_roll24",
+    "pm25_diff1",
+    "temperature",
+    "relativehumidity",
+    "wind_speed",
+    "wind_speed_roll3",
+    "wind_dir_sin",
+    "wind_dir_cos",
+    "rainfall_mm",
+    "rain_roll6",
+    "rain_roll24",
+    "cloud_cover_pct",
+    "hour_sin",
+    "hour_cos",
+    "dow",
+    "is_weekend",
+    "month",
+    "station_code"
+   ],
+   "metrics": {
+    "model_type": "xgboost_d4",
+    "val": {
+     "n": 1813,
+     "mae": 9.1868,
+     "rmse": 13.5939,
+     "r2": 0.1996,
+     "mape_pct": 38.6831
+    },
+    "test": {
+     "n": 2013,
+     "mae": 13.1929,
+     "rmse": 29.7173,
+     "r2": 0.2701,
+     "mape_pct": 50.7125
+    },
+    "test_per_station": {
+     "3409505": {
+      "n": 1031,
+      "mae": 13.5128,
+      "rmse": 34.2011,
+      "r2": 0.3088,
+      "mape_pct": 49.8183
+     },
+     "3409508": {
+      "n": 982,
+      "mae": 12.857,
+      "rmse": 24.1291,
+      "r2": 0.1504,
+      "mape_pct": 51.625
+     }
+    },
+    "interval": {
+     "level": 0.8,
+     "halfwidth": 13.402,
+     "test_coverage": 0.6776
+    },
+    "skill_vs_persistence": 0.1828,
+    "beats_baseline": true,
+    "candidate_val_rmse": {
+     "xgboost_d4": 13.5939,
+     "xgboost_d6": 13.9508,
+     "random_forest": 14.5596
+    },
+    "rows": {
+     "train": 10331,
+     "val": 2142,
+     "test": 2266
+    },
+    "top_features": [
+     [
+      "pm25_roll24",
+      0.2546
+     ],
+     [
+      "pm25_roll6",
+      0.1914
+     ],
+     [
+      "pm10_roll24",
+      0.1329
+     ],
+     [
+      "month",
+      0.0452
+     ],
+     [
+      "o3_lag3",
+      0.0442
+     ],
+     [
+      "pm25_lag0",
+      0.0254
+     ],
+     [
+      "hour_sin",
+      0.0219
+     ],
+     [
+      "pm10_roll6",
+      0.0171
+     ],
+     [
+      "o3_lag0",
+      0.0134
+     ],
+     [
+      "pm25_roll3",
+      0.0125
+     ]
+    ],
+    "split": {
+     "train_end": "2026-07-18T23:30:00",
+     "val_end": "2026-09-17T02:30:00",
+     "gap_hours": 6,
+     "first_obs": "2025-10-11 10:30:00",
+     "last_obs": "2026-11-16 04:30:00"
+    }
+   },
+   "baseline_metrics": {
+    "persistence": {
+     "n": 2013,
+     "mae": 11.8422,
+     "rmse": 36.3666,
+     "r2": -0.0931,
+     "mape_pct": 37.5848
+    },
+    "hour_of_day_mean": {
+     "n": 2013,
+     "mae": 32.9123,
+     "rmse": 44.3674,
+     "r2": -0.627,
+     "mape_pct": 142.9268
+    }
+   },
+   "artifact_path": "ml_engine/saved_models/pollution/pm25_h6_20261116-0742.joblib",
+   "calibration_status": "LOCALLY_VALIDATED",
+   "trained_on": "OBSERVED",
+   "is_active": true,
+   "notes": "xgboost_d4; train-only fit evaluated on held-out test period",
+   "trained_at": "2026-11-16T07:44:26.443731+00:00"
+  }
+ ]
+}

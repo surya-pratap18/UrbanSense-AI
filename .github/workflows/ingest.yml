@@ -1,0 +1,40 @@
+name: Scheduled data ingestion
+on:
+  schedule:
+    - cron: "7 * * * *"      # hourly at :07 (weather). GitHub may delay runs by several minutes.
+  workflow_dispatch: {}       # lets you run it by hand from the Actions tab
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+jobs:
+  weather:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+      - run: pip install -r requirements.txt
+      - name: Collect weather (Open-Meteo)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m scripts.run_collector weather
+      - name: Collect air quality (OpenAQ)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          OPENAQ_API_KEY: ${{ secrets.OPENAQ_API_KEY }}
+        run: python -m scripts.run_collector air-quality
+      - name: Install ML libraries (only once models exist)
+        if: ${{ hashFiles('ml_engine/saved_models/pollution/*.joblib') != '' }}
+        run: pip install -r ../requirements-ml.txt
+      - name: Generate air-quality forecasts
+        if: ${{ hashFiles('ml_engine/saved_models/pollution/*.joblib') != '' }}
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m scripts.run_forecasts

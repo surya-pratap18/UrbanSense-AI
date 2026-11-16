@@ -1,0 +1,6 @@
+-r backend/requirements.txt
+scikit-learn>=1.4
+xgboost>=2.0,<4
+joblib
+pandas
+numpy
